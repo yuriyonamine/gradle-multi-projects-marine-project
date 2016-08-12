@@ -1,5 +1,4 @@
-Closure cl = { task -> println "I'm $task.project.name" }
-task hello << cl
-project(':bluewhale') {
-    task hello << cl
+allprojects {
+	task hello << {task -> println "I'm $task.project.name"}
 }
+
