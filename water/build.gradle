@@ -2,3 +2,7 @@ allprojects {
 	task hello << {task -> println "I'm $task.project.name"}
 }
 
+subprojects {
+	hello << {task -> println " - I depend on water"} 
+}
+
